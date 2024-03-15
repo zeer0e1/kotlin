@@ -1,17 +1,17 @@
 package br.com.alura.aluragames.principal
 
 import tranformaIdade
-import br.com.alura.aluragames.modelo.Game
-import br.com.alura.aluragames.modelo.Jogador
+import br.com.alura.aluragames.modelo.Jogo
+import br.com.alura.aluragames.modelo.Gamer
 import br.com.alura.aluragames.services.ConsumoApi
 import java.util.*
 
 
 fun main() {
-    var meuJogo: Game? = null
+    var meuJogo: Jogo? = null
     val leitura = Scanner(System.`in`)
 
-    val jogador = Jogador.criarGamer(leitura)
+    val jogador = Gamer.criarGamer(leitura)
     println("Cadastro concluido com sucesso. Dados do gamer")
     println(jogador)
     println("Idade do gamer: "+ jogador.dataNascimento?.tranformaIdade())
@@ -25,7 +25,7 @@ fun main() {
         val meuInfoJogo = buscaApi.buscaJogo(codigo)
 
         val resultado = runCatching {
-            meuJogo = Game(
+            meuJogo = Jogo(
                 meuInfoJogo.info.title,
                 meuInfoJogo.info.thumb
             )

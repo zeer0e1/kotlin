@@ -1,10 +1,10 @@
-import br.com.alura.aluragames.modelo.Jogador
+import br.com.alura.aluragames.modelo.Gamer
 
 fun main(){
-    val gamer1 = Jogador("Lucas","lucazfreitaz@gmail.com")
+    val gamer1 = Gamer("Lucas","lucazfreitaz@gmail.com")
     println(gamer1)
 
-    val gamer2 = Jogador("Rauana",
+    val gamer2 = Gamer("Rauana",
         "rauana@gmail.com",
         "14/12/2021",
         "lola")
