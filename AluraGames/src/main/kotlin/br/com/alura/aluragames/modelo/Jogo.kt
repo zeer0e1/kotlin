@@ -1,6 +1,8 @@
 package br.com.alura.aluragames.modelo
 
 import com.google.gson.annotations.Expose
+import javax.persistence.*
+
 
 data class Jogo(
 
@@ -9,7 +11,7 @@ data class Jogo(
 ) : Recomendavel {
     var descricao: String? = null
     var preco = 0.0
-    var id = 0
+    private var id = 0
     private val listaNotas = mutableListOf<Int>()
 
 
